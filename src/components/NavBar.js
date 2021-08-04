@@ -1,8 +1,8 @@
 import { Button } from "./Button";
 import logolead from './leadmusiclogo.png';
+import CartWidget from './CartWidget';
 
-
-export default function NavBar(){
+function NavBar(){
 	return (
 		<>
 		<div className='navbar navbar-expand navbar-dark bg-dark'>
@@ -12,8 +12,12 @@ export default function NavBar(){
 			<Button text='VINTAGE' />
 			<Button text='VINILOS-DISCOS' />			
 			<Button text='CONTACTO' />
-			<div className='tituloApp' align='right'><h4>PRIVATE STOCK</h4><a href='#'>Iniciar Sesion</a></div>
+			<div className='tituloApp' align='right'><h4 className='hEst'>PRIVATE STOCK</h4><CartWidget />  </div>
+		
+		
 		</div>
 		</>
 	)
 }
+
+export default NavBar;
