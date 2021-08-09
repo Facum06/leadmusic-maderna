@@ -30,3 +30,19 @@ a:hover {
 .carritoB {
   
 }
+
+.counterBtn{  
+  padding: 5px;
+  display: flex;
+}
+
+.counterFrm{
+  
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.counterB {
+  font-size: 17px;
+  vertical-align: sub;
+}
