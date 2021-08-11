@@ -46,3 +46,17 @@ a:hover {
   font-size: 17px;
   vertical-align: sub;
 }
+
+.card {
+  width: 18rem;
+}
+.carritoitems{
+  display: inline-flex;
+  text-align: center;
+}
+.imgcarrito{
+  width: 70%;
+}
+.divimgcarr{
+
+}
