@@ -21,8 +21,7 @@ export default function CartItem ({id, desc, cantidad, price, title}) {
                 <div className='btn-cart'>
                     <button className='btn btn-danger' onClick={()=> BorrarCart(id)} >Borrar</button> 
                 </div>
-				</div>
-                                           
+				</div>                                           
             </li>
         </>
 

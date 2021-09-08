@@ -7,32 +7,26 @@ import { Link } from "react-router-dom";
 export default function ItemDetail({desc, price, pictureUrl, caracte, stock, id, title}) {
    
   
-   const [ItemCountVisible, setItemCountVisible] = useState(true)
-   //const [ItemVisible, setItemVisible] = useState(true)
-   const [FinalizarCompra, setFinalizarCompra] = useState(false)
-   //const [IrCart, setIrCart] = useState(false)
+   const [ItemCountVisible, setItemCountVisible] = useState(true)   
+   const [FinalizarCompra, setFinalizarCompra] = useState(false)   
    const datoContexto = useContext(Context)
   
    const agregar = (cantidad) => {
    
     setItemCountVisible(false)
-    setFinalizarCompra(true)   
-    //console.log("Agregar: id "+id+"| desc "+desc+"| cantArti "+cantidad+"| precio "+price);
-   
+    setFinalizarCompra(true)       
     datoContexto.addItem(id,desc,cantidad, price,title);
    } 
 
-   const openCartView = () => {
-       //setIrCart(true)
+   const openCartView = () => {       
       setFinalizarCompra(false) 
-    //   setItemVisible(false)   
     }
 
     return( 
     <>  
         <div>
        
-            <ItemView  desc = {desc} price = {price} caracte = {caracte} stock = {stock} pictureUrl = {pictureUrl} title={title} />
+        <ItemView  desc = {desc} price = {price} caracte = {caracte} stock = {stock} pictureUrl = {pictureUrl} title={title} />
        
         {ItemCountVisible && 
                  <ItemCounter stock= {stock} inicial = {1} onAdd={agregar} />
