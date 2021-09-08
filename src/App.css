@@ -14,7 +14,7 @@
 
 }
 
-a{
+a {
   color: #fff;
   text-decoration: none;
 }
@@ -27,13 +27,13 @@ a:hover {
   width: 35px;  
 }
 
-.carritoB {
-  
+.app-frm {
+  width: auto;
 }
 
 .counterBtn{  
   padding: 5px;
-  display: flex;
+  display: inline-flex;
 }
 
 .counterFrm{
@@ -44,21 +44,107 @@ a:hover {
 
 .counterB {
   font-size: 17px;
-  vertical-align: sub;
+  vertical-align: -webkit-baseline-middle;
 }
-.itemListContainer{
-  display: flex;
+.itemListContainer {
+  height: 650px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-.card {
-  width: 18rem;
+
+.card {  
+  text-align: center;
+  height: 350px;
+  margin: 2px;
 }
+
+.caracte-b{
+  font-weight: 500;
+}
+
+.caracte-a{
+  white-space: pre-line;
+  font-weight: 500;
+}
+
+.title {
+  margin: 5px;
+}
+
 .carritoitems{
   display: inline-flex;
   text-align: center;
 }
 .imgcarrito{
-  width: 70%;
+  width: 140px;
+  height: 160px;
 }
-.divimgcarr{
+.imgcarritovista{
+  width: auto;
+  height: inherit;
+}
 
+.link-productos {
+  color: #000;
+}
+ul li {
+  display: inline;
+  float: left;
+}
+
+.contenedor-cart{
+  margin-bottom: 3px;
+  width: 290px;
+  height: 350px;
+}
+
+.item-view{
+  display: inline-flex;
+  width: 100%;
+  height: 480px;
+  margin: 2px;
+}
+
+.item-view-pi{
+  width: 50%;
+  height: 100%;
+}
+
+.item-view-pd{
+  width: 50%;
+  height: 100%;
+}
+
+.item-counter{
+
+}
+
+.contenedor-prod {
+  margin: 5px;
+}
+.card-cart {
+  height: 260px;
+}
+
+.title-cart{
+  padding: 5px;
+  height: 50%;
+}
+
+.row-cart {
+  padding: 5px;  
+}
+
+.body-cart{
+  height: 30%;
+}
+
+.btn-cart{
+  height: 20%;
+  padding: 5px;
+}
+
+.row-cart-empty{
+ 
+  
 }

@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import Button from "./Button";
 import logolead from './leadmusiclogo.png';
 import CartWidget from './CartWidget';
 
@@ -7,10 +7,10 @@ function NavBar(){
 		<>
 		<div className='navbar navbar-expand navbar-dark bg-dark'>
 			<img src={logolead} className="lead-logo" alt="logo" />
-			<Button text='INICIO' />
-			<Button text='PRODUCTOS' />
-			<Button text='VINTAGE' />
-			<Button text='VINILOS-DISCOS' />			
+			<Button text='INICIO' milink='/' />
+			<Button text='PRODUCTOS' milink='/productos' />
+			<Button text='VINTAGE' milink='/vintage' />
+			<Button text='VINILOS' milink='/vinilos'/>			
 			<Button text='CONTACTO' />
 			<div className='tituloApp' align='right'><h4 className='hEst'>PRIVATE STOCK</h4><CartWidget />  </div>
 		
