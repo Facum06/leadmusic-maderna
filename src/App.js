@@ -6,7 +6,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import ItemList from './components/ItemList';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
-
+import Contact from './components/Contact';
 
 function App() {
   return ( 
@@ -22,14 +22,17 @@ function App() {
             </Route>
             <Route path='/cart' exact>
               <Cart />
-            </Route>
-            <Route path='/:categoria' exact>
+            </Route>  
+            <Route path='/contacto' exact>
+              <Contact />
+            </Route>                      
+            <Route path='/:cate' exact>
               <ItemList />
             </Route>
-            <Route path='/:categoria/:id' exact>
+            <Route path='/:cate/:id' exact>
               <ItemDetailContainer  />
             </Route>
-
+            
           </Switch>
       </div>
     </BrowserRouter>

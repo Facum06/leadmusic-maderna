@@ -1,33 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import mokProductos from '../data/mokProductos';
 import Item from './Item';
 import { useParams } from "react-router-dom";
+import { list, listCate } from "../firebase/leadmusic-model";
 
 export default function ItemListContainer(props) {
   const [listaProductos, setListaProductos] = useState([]);
   const { cate } = useParams()
 
-  useEffect(() => {
-    new Promise((resolve, reject) => {
-      setTimeout(() => {        
-        resolve(mokProductos);
-		reject({
-			status: 404
-		  });
-      }, 2000);
-    })
-      .then(dataResolve => {
-        if(cate !== null && cate !== undefined ){
-          const filtro=dataResolve.filter((producto)=> producto.cate === cate)
-          setListaProductos(filtro)          
-        }else {
-          setListaProductos(dataResolve);
-        }        
-      })
-      .catch(error => {
-        console.log('ERROR ITEM LIST: ' + error);
-      });
-  }, [cate]);
+  useEffect(() => {   
+    if(cate !== null && cate !== undefined ){
+      const lista = listCate(cate);
+      lista.then((data) => {
+        const rows = []
+        data.forEach(item =>{
+          rows.push({id: item.id, title: item.data().title, description: item.data().description, price: item.data().price, stock: item.data().stock, cate: item.data().cate, pictureUrl: item.data().pictureUrl, caracte: item.data().caracte });
+        });
+          setListaProductos(rows);
+         }) 
+        } else {
+          const lista = list();
+          lista.then((data) => {
+            const rows = []
+            data.forEach(item =>{
+              rows.push({id: item.id, title: item.data().title, description: item.data().description, price: item.data().price, stock: item.data().stock, cate: item.data().cate, pictureUrl: item.data().pictureUrl, caracte: item.data().caracte });
+            });
+              setListaProductos(rows);
+             }) 
+        }
+
+},[cate])
 
   return (
     <>

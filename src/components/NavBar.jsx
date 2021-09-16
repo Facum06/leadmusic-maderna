@@ -1,5 +1,5 @@
 import Button from "./Button";
-import logolead from './leadmusiclogo.png';
+import logolead from '../leadmusiclogo.png';
 import CartWidget from './CartWidget';
 
 function NavBar(){
@@ -11,7 +11,7 @@ function NavBar(){
 			<Button text='PRODUCTOS' milink='/productos' />
 			<Button text='VINTAGE' milink='/vintage' />
 			<Button text='VINILOS' milink='/vinilos'/>			
-			<Button text='CONTACTO' />
+			<Button text='CONTACTO' milink='/contacto' />
 			<div className='tituloApp' align='right'><h4 className='hEst'>PRIVATE STOCK</h4><CartWidget />  </div>
 		
 		

@@ -144,7 +144,15 @@ ul li {
   padding: 5px;
 }
 
-.row-cart-empty{
- 
+.contact-frm{
+  padding: 2rem;
+}
+
+.cartfinal-contenedor{
+  display: inline-block;
+}
+
+.tcompra {
+  width: fit-content;
   
 }
