@@ -12,9 +12,7 @@ function NavBar(){
 			<Button text='VINTAGE' milink='/vintage' />
 			<Button text='VINILOS' milink='/vinilos'/>			
 			<Button text='CONTACTO' milink='/contacto' />
-			<div className='tituloApp' align='right'><h4 className='hEst'>PRIVATE STOCK</h4><CartWidget />  </div>
-		
-		
+			<div className='tituloApp' align='right'><h4 className='hEst'>PRIVATE STOCK</h4><CartWidget />  </div>		
 		</div>
 		</>
 	)
